@@ -113,6 +113,7 @@ gulp.task(
                 function runningWatch() {
                     gulp.watch("./assets/scss/**/*", gulp.parallel("styles"));
                     gulp.watch("./assets/js/**/*", gulp.parallel("webpack:dev"));
+                    gulp.watch("./assets/index.html", gulp.parallel("webpack:dev"));
                     gulp.watch("./assets/img/**/*", gulp.parallel("imagemin"));
                     gulp.watch("./assets/manifest.json", gulp.parallel("copy-manifest"));
                     gulp.watch(["./public/**/*", "./public/*"]).on("change", reload);
