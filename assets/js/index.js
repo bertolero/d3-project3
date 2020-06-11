@@ -1,1 +1,2 @@
-import db from "./data/firebase-utils";
+const modal = document.querySelector(".modal");
+M.Modal.init(modal);

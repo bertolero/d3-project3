@@ -3,14 +3,16 @@
     <head>
         <title>Ninja Corp!</title>
         <meta charset="UTF-8">
-        <meta name="description" content="Learn how to code from the best platform by building real projects that will help you land the dream job and get a high paying salary">
+        <meta name="description"
+              content="Learn how to code from the best platform by building real projects that will help you land the dream job and get a high paying salary">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@codingphase">
         <meta name="twitter:image:alt" content="Learn how to code from one of the best platforms online.">
         <meta name="theme-color" content="#ad38f1"/>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta property="og:title" content="CodingPhase - Learn To Code and Get Paid ASAP!">
-        <meta property="og:description" content="Learn how to code from the best platform by building real projects that will help you land the dream job and get a high paying salary">
+        <meta property="og:description"
+              content="Learn how to code from the best platform by building real projects that will help you land the dream job and get a high paying salary">
         <meta property="og:image" content="https://codingphase.com/img/websitethumb.png">
         <meta property="og:site_name" content="CodingPhase LLC">
         <meta property="og:url" content="https://codingphase.com">
@@ -20,6 +22,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="canonical" href="/">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="css/global.css">
         <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
@@ -27,34 +30,37 @@
         <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#5bbad5">
         <link rel="manifest" href="manifest.json">
     </head>
-    <body class="grey darken-4">
-        <div class="nav z-depth-0">
-            <div class="section center">
-                <h3 class="white-text center">- The Dojo</h3>
-            </div>
+    <body>
+        <div class="pink section">
+            <h2 class="white-text center">Ninja Corp</h2>
         </div>
-        <div class="section center">
-            <p class="grey-text flow-text">A fitness tracker for ninjas</p>
+        <div class="grey lighten-2 section grey-text" style="position: relative">
+            <p class="flow-text center">The Number ONE Ninja Company</p>
+            <a href="#modal" class="btn-floating btn-large halfway-fab pink modal-trigger">
+                <i class="material-icons">add</i>
+            </a>
         </div>
-        <div class="container section">
-            <div class="row">
-                <div class="col s12 l5">
-                    <button class="active" data-activity="cycling">Cycling</button>
-                    <button data-activity="running">Running</button>
-                    <button data-activity="swimming">Swimming</button>
-                    <button data-activity="walking">Walking</button>
-                </div>
-                <div class="col s12 l6 push-l1">
-                    <div class="canvas"></div>
-                </div>
-            </div>
-            <div class="row">
-                <form class="col m6 push-m3">
-                    <p class="flow-text grey-text center">How much <span>cycling</span> have you done today?</p>
-                    <input class="grey-text" type="text" id="cycling" placeholder="Distance in m">
-                    <p class="center pink-text error text-lighten-1"></p>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <h4 class="pink-text center">Add New Employee</h4>
+                <form>
+                    <div class="input-field">
+                        <input type="text" id="name" placeholder="Employee Name">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="parent" placeholder="Report to...">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="department" placeholder="Department">
+                    </div>
+                    <div class="input-field">
+                        <button class="btn pink white-text">Add Employee</button>
+                    </div>
                 </form>
             </div>
+        </div>
+        <div class="container">
+            <div class="canvas"></div>
         </div>
         <!-- Compiled and minified JavaScript -->
     </body>
