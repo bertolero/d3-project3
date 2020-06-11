@@ -46,10 +46,15 @@ db.collection("employees").onSnapshot((res) => {
   update(data);
 });
 
+const colour = d3.scaleOrdinal(["#f4511e", "#e91e63", "#e53935", "#9c27b0"]);
+
 const update = (data) => {
   // remove current nodes
   graph.selectAll(".node").remove();
   graph.selectAll(".link").remove();
+
+  //update ordinal scale domain
+  colour.domain(data.map((item) => item.department));
 
   // get root node
   const rootNode = stratify(data);
@@ -88,7 +93,7 @@ const update = (data) => {
   // append rects to enter nodes
   enterNodes
     .append("rect")
-    .attr("fill", "#aaa")
+    .attr("fill", (d) => colour(d.data.department))
     .attr("stroke", "#555")
     .attr("stroke-width", 2)
     .attr("height", 50)
